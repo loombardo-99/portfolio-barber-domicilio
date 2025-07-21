@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap');
+
+/*
+Tema: Impacto Monocromático
+Paleta:
+Fundo: #ffffff (Branco)
+Texto/Fundo Alternativo: #000000 (Preto)
+*/
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #ffffff;
+    padding: 1.5rem 2.5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #000000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    font-size: 2rem;
+    font-weight: 900; /* Extra Bold */
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2.5rem;
+}
+
+nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #888888;
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('midia/capa.jpg') no-repeat center center/cover;
+    padding: 0 2rem;
+}
+
+.hero-text h1 {
+    font-size: 6rem; /* Gigante */
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão de Chamada para Ação (CTA) */
+.cta-button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 0;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Seções */
+section {
+    padding: 6rem 2.5rem 4rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+/* Cards de Cortes */
+#cortes {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#cortes h2 {
+    color: #ffffff;
+}
+
+.cortes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px; /* Linhas finas entre os cards */
+    background-color: #000000;
+}
+
+.card {
+    background-color: #000000;
+    text-align: left;
+    padding: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: #222222;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+}
+
+.card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Seção Sobre */
+#sobre p {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+}
+
+/* Seção Agendamento */
+#agendamento {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#agendamento h2 {
+    color: #ffffff;
+}
+
+#agendamento p {
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #cccccc;
+}
+
+.agendamento-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+#calendar {
+    flex: 2;
+}
+
+#horarios-disponiveis {
+    flex: 1;
+    background-color: #111111;
+    padding: 1.5rem;
+}
+
+#horarios-disponiveis h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#horarios-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.horario-button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 2px solid #333333;
+    padding: 0.8rem;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.horario-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+.horario-button.selected {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+}
+
+#confirmacao {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#confirmacao p {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos do FullCalendar */
+:root {
+    --fc-border-color: #333;
+    --fc-daygrid-day-number-color: #ffffff;
+    --fc-today-bg-color: rgba(255, 255, 255, 0.1);
+    --fc-button-bg-color: #ffffff;
+    --fc-button-text-color: #000000;
+    --fc-button-border-color: #ffffff;
+    --fc-button-hover-bg-color: #cccccc;
+    --fc-button-hover-border-color: #cccccc;
+    --fc-button-active-bg-color: #bbbbbb;
+    --fc-button-active-border-color: #bbbbbb;
+}
+
+.fc .fc-toolbar-title {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.fc .fc-daygrid-day.fc-day-past {
+    background-color: #1a1a1a;
+}
+
+.fc .fc-daygrid-day.selected-day {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.fc .fc-daygrid-day:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.fc-day-disabled {
+    background-color: #0a0a0a !important;
+    color: #555 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+
+.fc-day-disabled .fc-daygrid-day-number {
+    color: #555 !important;
+}
+
+/* Estilos do Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: #000000;
+    padding: 2rem;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border: 2px solid #ffffff;
+}
+
+.modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: #cccccc;
+}
+
+.modal-content form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #111111;
+    border: 1px solid #333333;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-content form input::placeholder {
+    color: #888888;
+}
+
+.modal-content form .cta-button {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Seção Contato */
+#contato p {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 4rem;
+    border-top: 2px solid #000000;
+}
+
+/* --- Responsividade --- */
+
+/* Menu Hamburguer */
+.menu-toggle {
+    display: none; /* Esconde por padrão em telas grandes */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animação do Hamburguer */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Para telas menores que 1024px (laptops e tablets maiores) */
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 4.5rem;
+    }
+
+    section h2 {
+        font-size: 3.5rem;
+    }
+
+    nav ul li {
+        margin-left: 1.5rem;
+    }
+}
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    nav .logo {
+        flex-grow: 1;
+    }
+
+    nav .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-top: 1px solid #000000;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    nav .nav-menu.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero-text h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 4rem 1.5rem 2rem;
+    }
+
+    section h2 {
+        font-size: 2.8rem;
+    }
+
+    .cortes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .agendamento-container {
+        flex-direction: column;
+    }
+
+    #horarios-disponiveis {
+        margin-top: 2rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    .horarios-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        padding: 1rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content form input {
+        padding: 0.6rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}
