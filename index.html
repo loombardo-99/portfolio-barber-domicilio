@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estilo Nômade - Barbearia a Domicílio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
     <script src='config.js'></script>
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
 </head>
@@ -46,7 +47,7 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-text">
-                <br><br>per
+                <br><br>
                 <p>Estilo, precisão e conveniência. A barbearia que vai até você.</p>
                 <a href="#agendamento" class="cta-button">Agende seu Horário Exclusivo</a>
             </div>
@@ -54,55 +55,83 @@
 
         <section id="cortes">
             <h2>Nossos Cortes</h2>
-            <div class="cortes-container">
-                <!-- Card 1 -->
-                <div class="card">
-                    <img src="midia/1.jpg" alt="Corte Degradê Navalhado">
-                    <h3>Degradê Navalhado</h3>
-                    <p>Precisão e atitude que marcam sua presença.</p>
+            <div class="carousel-wrapper">
+                <button id="prevBtn" class="carousel-btn prev-btn">&lt;</button>
+                <div class="cortes-container">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <img src="midia/1.jpg" alt="Corte Degradê Navalhado">
+                        <h3>Degradê Navalhado</h3>
+                        <p>Precisão e atitude que marcam sua presença.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <img src="midia/2.jpg" alt="Corte Social">
+                        <h3>Corte Social</h3>
+                        <p>Elegância clássica para o homem de negócios.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <img src="midia/3.jpg" alt="Corte Buzzcut">
+                        <h3>Buzzcut</h3>
+                        <p>Estilo minimalista, máximo impacto.</p>
+                    </div>
+                     <!-- Card 4 -->
+                    <div class="card">
+                        <img src="midia/4.jpg" alt="Corte Pompadour">
+                        <h3>Pompadour</h3>
+                        <p>Volume e personalidade para um visual marcante.</p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="card">
+                        <img src="midia/barba.jpg" alt="Barba Modelada">
+                        <h3>Barba Modelada</h3>
+                        <p>Contorno perfeito e estilo para sua barba.</p>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="card">
+                        <img src="midia/pezinho.jpg" alt="Pezinho e Acabamento">
+                        <h3>Pezinho e Acabamento</h3>
+                        <p>Detalhes que garantem um visual limpo e profissional.</p>
+                    </div>
+                    <!-- Card 7 -->
+                    <div class="card">
+                        <img src="midia/progressiva.jpg" alt="Progressiva Masculina">
+                        <h3>Progressiva Masculina</h3>
+                        <p>Cabelos lisos, alinhados e sem frizz.</p>
+                    </div>
+                    <!-- Card 8 -->
+                    <div class="card">
+                        <img src="midia/escova.jpg" alt="Escova e Hidratação">
+                        <h3>Escova e Hidratação</h3>
+                        <p>Brilho, maciez e um penteado impecável.</p>
+                    </div>
+                    <!-- Card 9 - Corte Afro Degradê -->
+                    <div class="card">
+                        <img src="midia/degrade-afro1.jpg" alt="Corte Afro Degradê">
+                        <h3>Corte Afro Degradê</h3>
+                        <p>Estilo e modernidade com degradê impecável.</p>
+                    </div>
+                    <!-- Card 10 - Corte Afro Nudred -->
+                    <div class="card">
+                        <img src="midia/nudrede.jpg" alt="Corte Afro Nudred">
+                        <h3>Corte Afro Nudred</h3>
+                        <p>Textura e volume com o clássico nudred.</p>
+                    </div>
+                    <!-- Card 11 - Corte Afro com Desenho -->
+                    <div class="card">
+                        <img src="midia/ultimo.jpg" alt="Corte Afro com Desenho">
+                        <h3>Corte Afro com Desenho</h3>
+                        <p>Personalize seu estilo com desenhos exclusivos.</p>
+                    </div>
+                    <!-- Card 12 - Trança -->
+                    <div class="card">
+                        <img src="midia/tranca.jpg" alt="Trança">
+                        <h3>Trança</h3>
+                        <p>Estilo e personalidade com tranças modernas.</p>
+                    </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="card">
-                    <img src="midia/2.jpg" alt="Corte Social">
-                    <h3>Corte Social</h3>
-                    <p>Elegância clássica para o homem de negócios.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="card">
-                    <img src="midia/3.jpg" alt="Corte Buzzcut">
-                    <h3>Buzzcut</h3>
-                    <p>Estilo minimalista, máximo impacto.</p>
-                </div>
-                 <!-- Card 4 -->
-                <div class="card">
-                    <img src="midia/4.jpg" alt="Corte Pompadour">
-                    <h3>Pompadour</h3>
-                    <p>Volume e personalidade para um visual marcante.</p>
-                </div>
-                <!-- Card 5 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x300.png?text=Barba+Modelada" alt="Barba Modelada">
-                    <h3>Barba Modelada</h3>
-                    <p>Contorno perfeito e estilo para sua barba.</p>
-                </div>
-                <!-- Card 6 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x300.png?text=Pezinho+e+Acabamento" alt="Pezinho e Acabamento">
-                    <h3>Pezinho e Acabamento</h3>
-                    <p>Detalhes que garantem um visual limpo e profissional.</p>
-                </div>
-                <!-- Card 7 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x300.png?text=Progressiva+Masculina" alt="Progressiva Masculina">
-                    <h3>Progressiva Masculina</h3>
-                    <p>Cabelos lisos, alinhados e sem frizz.</p>
-                </div>
-                <!-- Card 8 -->
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x300.png?text=Escova+e+Hidratação" alt="Escova e Hidratação">
-                    <h3>Escova e Hidratação</h3>
-                    <p>Brilho, maciez e um penteado impecável.</p>
-                </div>
+                <button id="nextBtn" class="carousel-btn next-btn">&gt;</button>
             </div>
         </section>
 
@@ -142,5 +171,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="carousel.js"></script>
 </body>
 </html>
